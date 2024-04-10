@@ -52,7 +52,6 @@ function AddData(){
         var aname=document.getElementById("aname").value;
         var date=document.getElementById("date").value;
         var quantity=document.getElementById("qty").value;
-    
         var blist;
     if(localStorage.getItem("blist")==null){
         blist=[];
@@ -85,7 +84,7 @@ function deleteData(index){
     localStorage.setItem("blist",JSON.stringify(blist));
       showData();
 }
- function updateData(index){
+function updateData(index){
         document.getElementById("submit").style.display="none";
         document.getElementById("Update").style.display="block";
         var blist = JSON.parse(localStorage.getItem("blist")) || [];
@@ -109,4 +108,4 @@ function deleteData(index){
         document.getElementById("Update").style.display="none";
         }
     };
- }
+}
